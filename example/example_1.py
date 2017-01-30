@@ -38,6 +38,10 @@ astra.data2d.delete(sino_id)
 import os
 os.chdir('../')
 import sint
-cd('./example')
 
-sino_estimated = sint(sino, thetas_new)
+
+sino_estimated = sint.sint(sino.transpose(), thetas)
+
+import matplotlib.pylab as pl
+
+pl.imshow(sino_estimated, cmap='Greys')
